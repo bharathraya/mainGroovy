@@ -26,10 +26,5 @@ pipeline {
 				echo "this is task 4"
 			}
 		}
-		stage("stage 5"){
-			steps {
-				echo "this is task 5"
-			}
-		}
 	}
 }
