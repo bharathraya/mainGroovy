@@ -1,0 +1,35 @@
+pipeline {
+	agent any
+	
+	parameters {
+		booleanParam(defaultValue: false, description: "Enable Service?", name: "myBoolean")
+		string(defaultValue: "TEST", description:"which environment to deploy in..?", name: "deployEnv" 
+	}
+	stages {
+		stage("stage 1"){
+			steps {
+				echo "booleanParam is set to: ${params.myBoolean}"
+			}
+		}
+		stage("stage 2"){
+			steps {
+				echo "environment to deploy is set to: ${params.deployEnv}"
+			}
+		}
+		stage("stage 3"){
+			steps {
+				echo "this is task 3"
+			}
+		}
+		stage("stage 4"){
+			steps {
+				echo "this is task 4"
+			}
+		}
+		stage("stage 5"){
+			steps {
+				echo "this is task 5"
+			}
+		}
+	}
+}
